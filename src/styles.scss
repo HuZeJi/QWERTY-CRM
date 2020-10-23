@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans+Condensed:wght@300&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Nanum Gothic", sans-serif !important;
+  background-color: #f3f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba($color: #000000, $alpha: 0.25);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #000000, $alpha: 0.3);
+  border-radius: 10px;
+}

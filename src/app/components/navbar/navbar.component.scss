@@ -1,0 +1,71 @@
+.avatar {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.nav-container {
+  overflow: hidden;
+  width: 205px;
+  height: 100vh;
+  border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+  // font-size: 0.75rem;
+
+  color: whitesmoke;
+
+  background: rgb(181, 73, 91);
+  background: linear-gradient(
+    0deg,
+    rgba(181, 73, 91, 1) 0%,
+    rgba(225, 107, 140, 1) 100%
+  );
+}
+
+.user-logged {
+  display: flex;
+  align-items: center;
+}
+
+.user-logged div {
+  margin: 15px;
+}
+
+.section {
+  display: inline-grid;
+  width: 100%;
+}
+
+.section .title {
+  font-weight: bold;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 35px;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.btn .icon {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  overflow: hidden;
+  background-color: rgba($color: #000000, $alpha: 0.05);
+}
+
+.nav-container {
+  hr {
+    width: 75%;
+    background-color: rgba($color: #000000, $alpha: 0.05);
+    color: rgba($color: #000000, $alpha: 0.05);
+    margin-bottom: 10px;
+  }
+}
