@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>{{ title }}</h2>
+  <mat-dialog-content class="">
+    <mat-form-field class="field">
+      <mat-label>Identification</mat-label>
+      <input matInput [(ngModel)]="employee.id" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Nombres</mat-label>
+      <input matInput [(ngModel)]="employee.firstName" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Apellidos</mat-label>
+      <input matInput [(ngModel)]="employee.lastName" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Correo</mat-label>
+      <input matInput [(ngModel)]="employee.email" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Genero</mat-label>
+      <input matInput [(ngModel)]="employee.gender" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Puesto</mat-label>
+      <input matInput [(ngModel)]="employee.position" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="employee.nickname" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Edad</mat-label>
+      <input matInput [(ngModel)]="employee.age" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <!-- <a mat-flat-button class="btn btn-action" [mat-dialog-close]="employee" -->
+    <a mat-flat-button class="btn btn-action" [mat-dialog-close]="employee"
+      >Crear</a
+    >
+    <a mat-flat-button class="btn btn-warning" (click)="resolveDialog()"
+      >Salir</a
+    >
+  </mat-dialog-actions>
+</div>

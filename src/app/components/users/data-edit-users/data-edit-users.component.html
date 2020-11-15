@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>{{ title }}</h2>
+  <mat-dialog-content class="">
+    <mat-form-field class="field">
+      <mat-label>Identification</mat-label>
+      <input matInput [(ngModel)]="user.id" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="user.nickname" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="user.password" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <!-- <a mat-flat-button class="btn btn-action" [mat-dialog-close]="employee" -->
+    <a mat-flat-button class="btn btn-action" [mat-dialog-close]="user"
+      >Crear</a
+    >
+    <a mat-flat-button class="btn btn-warning" (click)="resolveDialog()"
+      >Salir</a
+    >
+  </mat-dialog-actions>
+</div>

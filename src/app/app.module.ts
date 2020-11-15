@@ -10,6 +10,10 @@ import { EmployeeCardComponent } from './components/employee-card/employee-card.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { UsersComponent } from './components/users/users.component';
+import { CreateEmployeeComponent } from './components/employees/create-employee/create-employee.component';
+import { FormsModule } from '@angular/forms';
+import { DataEditUsersComponent } from './components/users/data-edit-users/data-edit-users.component';
+import { ComprasComponent } from './components/compras/compras.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +22,19 @@ import { UsersComponent } from './components/users/users.component';
     EmployeeCardComponent,
     NavbarComponent,
     EmployeesComponent,
-    UsersComponent
+    UsersComponent,
+    CreateEmployeeComponent,
+    DataEditUsersComponent,
+    ComprasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

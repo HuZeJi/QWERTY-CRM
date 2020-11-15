@@ -34,11 +34,12 @@ body {
 .btn-action,
 .btn-create {
   color: white;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(0, 204, 130, 1) 11.2%,
-    rgba(58, 181, 46, 1) 91.7%
-  );
+  // background-image: linear-gradient(
+  //   109.6deg,
+  //   rgba(0, 204, 130, 1) 11.2%,
+  //   rgba(58, 181, 46, 1) 91.7%
+  // );
+  background-color: #03a6a6;
 }
 
 .btn-create {
@@ -47,19 +48,22 @@ body {
 
 .btn-info {
   color: white;
-  background-image: linear-gradient(
-    109.5deg,
-    rgba(76, 221, 242, 1) 11.2%,
-    rgba(92, 121, 255, 1) 91.1%
-  );
+  // background-image: linear-gradient(
+  //   109.5deg,
+  //   rgba(76, 221, 242, 1) 11.2%,
+  //   rgba(92, 121, 255, 1) 91.1%
+  // );
+
+  background-color: #1b70a6;
 }
 .btn-warning {
   color: white;
-  background-image: radial-gradient(
-    circle 1027px at 0.3% 99.8%,
-    rgba(205, 32, 70, 1) 0%,
-    rgba(152, 124, 223, 1) 100.2%
-  );
+  // background-image: radial-gradient(
+  //   circle 1027px at 0.3% 99.8%,
+  //   rgba(205, 32, 70, 1) 0%,
+  //   rgba(152, 124, 223, 1) 100.2%
+  // );
+  background-color: #f24535;
 }
 
 .textbox {
@@ -77,9 +81,10 @@ body {
 .rounded-create {
   // margin: 10px;
   color: white;
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(0, 204, 130, 1) 11.2%,
-    rgba(58, 181, 46, 1) 91.7%
-  );
+  // background-image: linear-gradient(
+  //   109.6deg,
+  //   rgba(0, 204, 130, 1) 11.2%,
+  //   rgba(58, 181, 46, 1) 91.7%
+  // );
+  background-color: #03a6a6;
 }
