@@ -1,0 +1,45 @@
+.container {
+    padding: 50px 0;
+    background: #fff;
+  }
+  
+  .header-section {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .header-section > h1 {
+    text-transform: uppercase;
+  }
+  
+  .filter-section {
+    width: 90%;
+    padding-top: 10px;
+    margin: auto;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .actions {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .action-section a{
+      margin-right: 10px;
+  }
+  
+  .table{
+      padding: 20px 0;
+  }
+  
+  .mat-table{
+      width: 100%;
+  }
+  
+  .mat-header-cell,
+  .mat-cell{
+      padding: 16px 10px;
+  }

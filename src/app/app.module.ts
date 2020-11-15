@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { DataEditUsersComponent } from './components/users/data-edit-users/data-edit-users.component';
 import { ComprasComponent } from './components/compras/compras.component';
 import { VentasComponent } from './components/ventas/ventas.component';
+import { StorageComponent } from './components/storage/storage.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { VentasComponent } from './components/ventas/ventas.component';
     DataEditUsersComponent,
     ComprasComponent,
     VentasComponent,
+    StorageComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

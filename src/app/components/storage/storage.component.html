@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="header-section">
+    <h1>Licences</h1>
+    <div class="filter-section">
+      <mat-form-field class="textbox-filter">
+        <mat-label>Licences</mat-label>
+        <input matInput placeholder="Search licences" #input />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="actions">
+      <a mat-flat-button class="btn btn-create">
+        <mat-icon>add</mat-icon>
+        Create New Licence
+      </a>
+    </div>
+    <div class="table">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef>Type</th>
+          <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+        </ng-container>
+        <ng-container matColumnDef="duration">
+          <th mat-header-cell *matHeaderCellDef>Duration</th>
+          <td mat-cell *matCellDef="let element">{{ element.duration }} Year</td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef>Price</th>
+          <td mat-cell *matCellDef="let element">$ {{ element.price }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <div class="action-section">
+              <a mat-flat-button class="btn btn-action">Edit</a>
+              <a mat-flat-button class="btn btn-info">Details</a>
+              <a mat-flat-button class="btn btn-warning">Delete</a>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">
+            No data matching the filter "{{ input.value }}"
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

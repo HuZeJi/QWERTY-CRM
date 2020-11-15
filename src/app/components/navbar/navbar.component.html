@@ -5,16 +5,18 @@
   </div>
   <br />
   <div class="section">
-    <a class="btn" href="#"><mat-icon class="icon">add_box</mat-icon>Storage</a>
-  </div>
-  <div class="section">
-    <a class="btn" href="#"
-      ><mat-icon class="icon">person_add_alt_1</mat-icon>Clients</a
+    <a [routerLink]="['/storage']" class="btn" href="#"
+      ><mat-icon class="icon">add_box</mat-icon>Licences</a
     >
   </div>
   <div class="section">
     <a class="btn" href="#"
-      ><mat-icon class="icon">person_remove</mat-icon>Providers</a
+      ><mat-icon class="icon">extension</mat-icon>Solutions</a
+    >
+  </div>
+  <div class="section">
+    <a [routerLink]="['/clients']" class="btn" href="#"
+      ><mat-icon class="icon">person_add_alt_1</mat-icon>Clients</a
     >
   </div>
   <div class="section">
