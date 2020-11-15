@@ -10,6 +10,8 @@ import { EmployeeCardComponent } from './components/employee-card/employee-card.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { UsersComponent } from './components/users/users.component';
+import { StorageComponent } from './components/storage/storage.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UsersComponent } from './components/users/users.component';
     EmployeeCardComponent,
     NavbarComponent,
     EmployeesComponent,
-    UsersComponent
+    UsersComponent,
+    StorageComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,
