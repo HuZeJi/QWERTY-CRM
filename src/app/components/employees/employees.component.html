@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>EMPLOYEES</h1>
+  <h1>EMPLEADOS</h1>
   <div class="content">
     <div class="textbox">
       <mat-form-field class="textbox-filter">
@@ -13,7 +13,7 @@
       </mat-form-field>
     </div>
 
-    <a mat-flat-button class="btn btn-create">
+    <a mat-flat-button class="btn btn-create" (click)="newData()">
       <mat-icon>add</mat-icon>
       Create New Employee
     </a>
@@ -47,13 +47,32 @@
         <th mat-header-cell *matHeaderCellDef>Edad</th>
         <td mat-cell *matCellDef="let element">{{ element.age }}</td>
       </ng-container>
+      <ng-container matColumnDef="nickname">
+        <th mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element">{{ element.nickname }}</td>
+      </ng-container>
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let element">
           <div class="action-section">
-            <a mat-flat-button class="btn btn-action">Edit</a>
-            <a mat-flat-button class="btn btn-info">Details</a>
-            <a mat-flat-button class="btn btn-warning">Delete</a>
+            <a
+              mat-flat-button
+              class="btn btn-action"
+              (click)="editData(element.id)"
+              >Edit</a
+            >
+            <!-- <a
+              mat-flat-button
+              class="btn btn-info"
+              (click)="detailsData(element)"
+              >Details</a
+            > -->
+            <a
+              mat-flat-button
+              class="btn btn-warning"
+              (click)="deleteData(element.id)"
+              >Delete</a
+            >
           </div>
         </td>
       </ng-container>
@@ -69,7 +88,7 @@
     </table>
     <mat-paginator
       class="page"
-      [pageSizeOptions]="[25, 50, 100]"
+      [pageSizeOptions]="[10, 25, 50, 100]"
       showFirstLastButtons
     ></mat-paginator>
   </div>

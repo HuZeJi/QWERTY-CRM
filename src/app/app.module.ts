@@ -10,6 +10,11 @@ import { EmployeeCardComponent } from './components/employee-card/employee-card.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { UsersComponent } from './components/users/users.component';
+import { CreateEmployeeComponent } from './components/employees/create-employee/create-employee.component';
+import { FormsModule } from '@angular/forms';
+import { DataEditUsersComponent } from './components/users/data-edit-users/data-edit-users.component';
+import { ComprasComponent } from './components/compras/compras.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 import { StorageComponent } from './components/storage/storage.component';
 import { ClientsComponent } from './components/clients/clients.component';
 
@@ -21,6 +26,10 @@ import { ClientsComponent } from './components/clients/clients.component';
     NavbarComponent,
     EmployeesComponent,
     UsersComponent,
+    CreateEmployeeComponent,
+    DataEditUsersComponent,
+    ComprasComponent,
+    VentasComponent,
     StorageComponent,
     ClientsComponent
   ],
@@ -28,9 +37,10 @@ import { ClientsComponent } from './components/clients/clients.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

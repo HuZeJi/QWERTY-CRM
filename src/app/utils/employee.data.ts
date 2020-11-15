@@ -5,6 +5,7 @@ export class IEMPLOYEE {
   email: string;
   gender: string;
   position: string;
+  nickname: string;
   age: number;
 }
 
@@ -15,9 +16,10 @@ export class EMPLOYEE {
   email: string;
   gender: string;
   position: string;
+  nickname: string;
   age: number;
 
-  dataFill() {
+  dataFill(): IEMPLOYEE[] {
     return [
       {
         id: 1,
@@ -26,6 +28,7 @@ export class EMPLOYEE {
         email: 'wdelhanty0@purevolume.com',
         gender: 'Male',
         position: 'Training',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -35,6 +38,7 @@ export class EMPLOYEE {
         email: 'rhariot1@geocities.jp',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 21,
       },
       {
@@ -44,6 +48,7 @@ export class EMPLOYEE {
         email: 'tinglish2@meetup.com',
         gender: 'Female',
         position: 'Sales',
+        nickname: 'no_user',
         age: 36,
       },
       {
@@ -53,6 +58,7 @@ export class EMPLOYEE {
         email: 'honoulane3@nationalgeographic.com',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 46,
       },
       {
@@ -62,6 +68,7 @@ export class EMPLOYEE {
         email: 'elumley4@google.de',
         gender: 'Male',
         position: 'Legal',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -71,6 +78,7 @@ export class EMPLOYEE {
         email: 'anorgate5@storify.com',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 33,
       },
       {
@@ -80,6 +88,7 @@ export class EMPLOYEE {
         email: 'labba6@photobucket.com',
         gender: 'Female',
         position: 'Legal',
+        nickname: 'no_user',
         age: 36,
       },
       {
@@ -89,6 +98,7 @@ export class EMPLOYEE {
         email: 'umeckiff7@vk.com',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -98,6 +108,7 @@ export class EMPLOYEE {
         email: 'jcranch8@google.com.br',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 59,
       },
       {
@@ -107,6 +118,7 @@ export class EMPLOYEE {
         email: 'mcummine9@jalbum.net',
         gender: 'Female',
         position: 'Sales',
+        nickname: 'no_user',
         age: 36,
       },
       {
@@ -116,6 +128,7 @@ export class EMPLOYEE {
         email: 'aalyukina@sun.com',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 58,
       },
       {
@@ -125,6 +138,7 @@ export class EMPLOYEE {
         email: 'fwalshb@ezinearticles.com',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 42,
       },
       {
@@ -134,6 +148,7 @@ export class EMPLOYEE {
         email: 'cfountianc@photobucket.com',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 43,
       },
       {
@@ -143,6 +158,7 @@ export class EMPLOYEE {
         email: 'lofairyd@flavors.me',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 42,
       },
       {
@@ -152,6 +168,7 @@ export class EMPLOYEE {
         email: 'jboyese@jimdo.com',
         gender: 'Male',
         position: 'Support',
+        nickname: 'no_user',
         age: 58,
       },
       {
@@ -161,6 +178,7 @@ export class EMPLOYEE {
         email: 'smaddisonf@businessinsider.com',
         gender: 'Male',
         position: 'Legal',
+        nickname: 'no_user',
         age: 28,
       },
       {
@@ -170,6 +188,7 @@ export class EMPLOYEE {
         email: 'ncossinsg@seesaa.net',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 56,
       },
       {
@@ -179,6 +198,7 @@ export class EMPLOYEE {
         email: 'gdemareh@vistaprint.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 27,
       },
       {
@@ -188,6 +208,7 @@ export class EMPLOYEE {
         email: 'oslatei@ebay.co.uk',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -197,6 +218,7 @@ export class EMPLOYEE {
         email: 'sbilbrookj@com.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -206,6 +228,7 @@ export class EMPLOYEE {
         email: 'amacdunlevyk@fda.gov',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 35,
       },
       {
@@ -215,6 +238,7 @@ export class EMPLOYEE {
         email: 'tbeeresl@noaa.gov',
         gender: 'Female',
         position: 'Sales',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -224,6 +248,7 @@ export class EMPLOYEE {
         email: 'mperlem@hao123.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 28,
       },
       {
@@ -233,6 +258,7 @@ export class EMPLOYEE {
         email: 'plespern@seesaa.net',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 60,
       },
       {
@@ -242,6 +268,7 @@ export class EMPLOYEE {
         email: 'dbecheo@bloglines.com',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -251,6 +278,7 @@ export class EMPLOYEE {
         email: 'bmorcomp@geocities.com',
         gender: 'Male',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -260,6 +288,7 @@ export class EMPLOYEE {
         email: 'aaronsteinq@zimbio.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 38,
       },
       {
@@ -269,6 +298,7 @@ export class EMPLOYEE {
         email: 'dballchinr@mysql.com',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 26,
       },
       {
@@ -278,6 +308,7 @@ export class EMPLOYEE {
         email: 'nsleits@google.com.hk',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -287,6 +318,7 @@ export class EMPLOYEE {
         email: 'gpaolinot@joomla.org',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 54,
       },
       {
@@ -296,6 +328,7 @@ export class EMPLOYEE {
         email: 'kschachu@cdc.gov',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 37,
       },
       {
@@ -305,6 +338,7 @@ export class EMPLOYEE {
         email: 'ghuiev@icio.us',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 42,
       },
       {
@@ -314,6 +348,7 @@ export class EMPLOYEE {
         email: 'rpackingtonw@list-manage.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 32,
       },
       {
@@ -323,6 +358,7 @@ export class EMPLOYEE {
         email: 'fatwellx@google.cn',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 21,
       },
       {
@@ -332,6 +368,7 @@ export class EMPLOYEE {
         email: 'hstpierrey@discovery.com',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -341,6 +378,7 @@ export class EMPLOYEE {
         email: 'aheafordz@mashable.com',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 47,
       },
       {
@@ -350,6 +388,7 @@ export class EMPLOYEE {
         email: 'gradbourn10@histats.com',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 41,
       },
       {
@@ -359,6 +398,7 @@ export class EMPLOYEE {
         email: 'mbirchenhead11@so-net.ne.jp',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 47,
       },
       {
@@ -368,6 +408,7 @@ export class EMPLOYEE {
         email: 'fbalma12@discovery.com',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 32,
       },
       {
@@ -377,6 +418,7 @@ export class EMPLOYEE {
         email: 'mcancutt13@disqus.com',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 43,
       },
       {
@@ -386,6 +428,7 @@ export class EMPLOYEE {
         email: 'asutherel14@amazonaws.com',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -395,6 +438,7 @@ export class EMPLOYEE {
         email: 'amebs15@blinklist.com',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -404,6 +448,7 @@ export class EMPLOYEE {
         email: 'ejanota16@exblog.jp',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 33,
       },
       {
@@ -413,6 +458,7 @@ export class EMPLOYEE {
         email: 'zbarrell17@huffingtonpost.com',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 23,
       },
       {
@@ -422,6 +468,7 @@ export class EMPLOYEE {
         email: 'wgetley18@posterous.com',
         gender: 'Male',
         position: 'Training',
+        nickname: 'no_user',
         age: 24,
       },
       {
@@ -431,6 +478,7 @@ export class EMPLOYEE {
         email: 'sdonovin19@usda.gov',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -440,6 +488,7 @@ export class EMPLOYEE {
         email: 'trubra1a@sina.com.cn',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 28,
       },
       {
@@ -449,6 +498,7 @@ export class EMPLOYEE {
         email: 'slydon1b@smh.com.au',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 32,
       },
       {
@@ -458,6 +508,7 @@ export class EMPLOYEE {
         email: 'kgosse1c@mayoclinic.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -467,6 +518,7 @@ export class EMPLOYEE {
         email: 'rmacci1d@tumblr.com',
         gender: 'Male',
         position: 'Sales',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -476,6 +528,7 @@ export class EMPLOYEE {
         email: 'ftidcomb1e@purevolume.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -485,6 +538,7 @@ export class EMPLOYEE {
         email: 'aaitkenhead1f@japanpost.jp',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 21,
       },
       {
@@ -494,6 +548,7 @@ export class EMPLOYEE {
         email: 'mtanton1g@lulu.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -503,6 +558,7 @@ export class EMPLOYEE {
         email: 'ksorrel1h@histats.com',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 60,
       },
       {
@@ -512,6 +568,7 @@ export class EMPLOYEE {
         email: 'kmulbery1i@sbwire.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 21,
       },
       {
@@ -521,6 +578,7 @@ export class EMPLOYEE {
         email: 'mtorbett1j@is.gd',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 33,
       },
       {
@@ -530,6 +588,7 @@ export class EMPLOYEE {
         email: 'zdyott1k@examiner.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 49,
       },
       {
@@ -539,6 +598,7 @@ export class EMPLOYEE {
         email: 'yjessope1l@prweb.com',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -548,6 +608,7 @@ export class EMPLOYEE {
         email: 'dtatford1m@abc.net.au',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -557,6 +618,7 @@ export class EMPLOYEE {
         email: 'estrongitharm1n@blogspot.com',
         gender: 'Male',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -566,6 +628,7 @@ export class EMPLOYEE {
         email: 'omclafferty1o@naver.com',
         gender: 'Male',
         position: 'Sales',
+        nickname: 'no_user',
         age: 56,
       },
       {
@@ -575,6 +638,7 @@ export class EMPLOYEE {
         email: 'pwalkling1p@jiathis.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 60,
       },
       {
@@ -584,6 +648,7 @@ export class EMPLOYEE {
         email: 'gstanistrete1q@state.tx.us',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -593,6 +658,7 @@ export class EMPLOYEE {
         email: 'bcolombier1r@de.vu',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -602,6 +668,7 @@ export class EMPLOYEE {
         email: 'jadshede1s@nbcnews.com',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 36,
       },
       {
@@ -611,6 +678,7 @@ export class EMPLOYEE {
         email: 'mdike1t@google.ru',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 23,
       },
       {
@@ -620,6 +688,7 @@ export class EMPLOYEE {
         email: 'lstodit1u@newsvine.com',
         gender: 'Female',
         position: 'Legal',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -629,6 +698,7 @@ export class EMPLOYEE {
         email: 'cjanosevic1v@ehow.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -638,6 +708,7 @@ export class EMPLOYEE {
         email: 'mconrad1w@parallels.com',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 39,
       },
       {
@@ -647,6 +718,7 @@ export class EMPLOYEE {
         email: 'ublackaller1x@live.com',
         gender: 'Male',
         position: 'Support',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -656,6 +728,7 @@ export class EMPLOYEE {
         email: 'vbeake1y@slideshare.net',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -665,6 +738,7 @@ export class EMPLOYEE {
         email: 'ndrysdell1z@virginia.edu',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 31,
       },
       {
@@ -674,6 +748,7 @@ export class EMPLOYEE {
         email: 'dbarrus20@posterous.com',
         gender: 'Male',
         position: 'Support',
+        nickname: 'no_user',
         age: 58,
       },
       {
@@ -683,6 +758,7 @@ export class EMPLOYEE {
         email: 'pfarrens21@nasa.gov',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 37,
       },
       {
@@ -692,6 +768,7 @@ export class EMPLOYEE {
         email: 'mhiggoe22@narod.ru',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 47,
       },
       {
@@ -701,6 +778,7 @@ export class EMPLOYEE {
         email: 'dquakley23@sfgate.com',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 43,
       },
       {
@@ -710,6 +788,7 @@ export class EMPLOYEE {
         email: 'datherley24@psu.edu',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 49,
       },
       {
@@ -719,6 +798,7 @@ export class EMPLOYEE {
         email: 'vbewly25@so-net.ne.jp',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 37,
       },
       {
@@ -728,6 +808,7 @@ export class EMPLOYEE {
         email: 'hcollar26@miibeian.gov.cn',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -737,6 +818,7 @@ export class EMPLOYEE {
         email: 'ecrush27@yelp.com',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 54,
       },
       {
@@ -746,6 +828,7 @@ export class EMPLOYEE {
         email: 'lsargeant28@fema.gov',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 60,
       },
       {
@@ -755,6 +838,7 @@ export class EMPLOYEE {
         email: 'ebloomfield29@army.mil',
         gender: 'Female',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -764,6 +848,7 @@ export class EMPLOYEE {
         email: 'tproffitt2a@spotify.com',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 32,
       },
       {
@@ -773,6 +858,7 @@ export class EMPLOYEE {
         email: 'htiesman2b@ustream.tv',
         gender: 'Male',
         position: 'Legal',
+        nickname: 'no_user',
         age: 46,
       },
       {
@@ -782,6 +868,7 @@ export class EMPLOYEE {
         email: 'mnehls2c@yellowpages.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 26,
       },
       {
@@ -791,6 +878,7 @@ export class EMPLOYEE {
         email: 'tglede2d@upenn.edu',
         gender: 'Male',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 53,
       },
       {
@@ -800,6 +888,7 @@ export class EMPLOYEE {
         email: 'iralfe2e@tiny.cc',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 22,
       },
       {
@@ -809,6 +898,7 @@ export class EMPLOYEE {
         email: 'chele2f@usnews.com',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 53,
       },
       {
@@ -818,6 +908,7 @@ export class EMPLOYEE {
         email: 'emarling2g@usnews.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -827,6 +918,7 @@ export class EMPLOYEE {
         email: 'jroad2h@oracle.com',
         gender: 'Male',
         position: 'Training',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -836,6 +928,7 @@ export class EMPLOYEE {
         email: 'rcrocket2i@homestead.com',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 43,
       },
       {
@@ -845,6 +938,7 @@ export class EMPLOYEE {
         email: 'vfrohock2j@usnews.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 35,
       },
       {
@@ -854,6 +948,7 @@ export class EMPLOYEE {
         email: 'lhowels2k@ed.gov',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 41,
       },
       {
@@ -863,6 +958,7 @@ export class EMPLOYEE {
         email: 'vjoontjes2l@bing.com',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -872,6 +968,7 @@ export class EMPLOYEE {
         email: 'vtregidga2m@xing.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -881,6 +978,7 @@ export class EMPLOYEE {
         email: 'evahey2n@illinois.edu',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 22,
       },
       {
@@ -890,6 +988,7 @@ export class EMPLOYEE {
         email: 'aalvey2o@pinterest.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 28,
       },
       {
@@ -899,6 +998,7 @@ export class EMPLOYEE {
         email: 'bbowmaker2p@cmu.edu',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -908,6 +1008,7 @@ export class EMPLOYEE {
         email: 'edunkley2q@businessweek.com',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 40,
       },
       {
@@ -917,6 +1018,7 @@ export class EMPLOYEE {
         email: 'apeattie2r@indiatimes.com',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 24,
       },
       {
@@ -926,6 +1028,7 @@ export class EMPLOYEE {
         email: 'rquakley2s@wix.com',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 53,
       },
       {
@@ -935,6 +1038,7 @@ export class EMPLOYEE {
         email: 'qlamshead2t@yelp.com',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 41,
       },
       {
@@ -944,6 +1048,7 @@ export class EMPLOYEE {
         email: 'anassey2u@cocolog-nifty.com',
         gender: 'Female',
         position: 'Sales',
+        nickname: 'no_user',
         age: 24,
       },
       {
@@ -953,6 +1058,7 @@ export class EMPLOYEE {
         email: 'ehorburgh2v@amazon.de',
         gender: 'Male',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -962,6 +1068,7 @@ export class EMPLOYEE {
         email: 'lcortnay2w@example.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -971,6 +1078,7 @@ export class EMPLOYEE {
         email: 'omarzelli2x@ehow.com',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -980,6 +1088,7 @@ export class EMPLOYEE {
         email: 'dswadling2y@hao123.com',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -989,6 +1098,7 @@ export class EMPLOYEE {
         email: 'srankin2z@baidu.com',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 33,
       },
       {
@@ -998,6 +1108,7 @@ export class EMPLOYEE {
         email: 'jgrastye30@friendfeed.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 41,
       },
       {
@@ -1007,6 +1118,7 @@ export class EMPLOYEE {
         email: 'hrennles31@last.fm',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -1016,6 +1128,7 @@ export class EMPLOYEE {
         email: 'gjatczak32@skype.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 38,
       },
       {
@@ -1025,6 +1138,7 @@ export class EMPLOYEE {
         email: 'tbottle33@japanpost.jp',
         gender: 'Female',
         position: 'Legal',
+        nickname: 'no_user',
         age: 46,
       },
       {
@@ -1034,6 +1148,7 @@ export class EMPLOYEE {
         email: 'gdutton34@pagesperso-orange.fr',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -1043,6 +1158,7 @@ export class EMPLOYEE {
         email: 'fjojic35@samsung.com',
         gender: 'Male',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 57,
       },
       {
@@ -1052,6 +1168,7 @@ export class EMPLOYEE {
         email: 'sbeauly36@cnn.com',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 38,
       },
       {
@@ -1061,6 +1178,7 @@ export class EMPLOYEE {
         email: 'einggall37@statcounter.com',
         gender: 'Female',
         position: 'Legal',
+        nickname: 'no_user',
         age: 53,
       },
       {
@@ -1070,6 +1188,7 @@ export class EMPLOYEE {
         email: 'nlikly38@mail.ru',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 27,
       },
       {
@@ -1079,6 +1198,7 @@ export class EMPLOYEE {
         email: 'kkoppelmann39@imageshack.us',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 55,
       },
       {
@@ -1088,6 +1208,7 @@ export class EMPLOYEE {
         email: 'cstolworthy3a@free.fr',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 40,
       },
       {
@@ -1097,6 +1218,7 @@ export class EMPLOYEE {
         email: 'jbrydson3b@biglobe.ne.jp',
         gender: 'Male',
         position: 'Training',
+        nickname: 'no_user',
         age: 46,
       },
       {
@@ -1106,6 +1228,7 @@ export class EMPLOYEE {
         email: 'bolman3c@forbes.com',
         gender: 'Female',
         position: 'Engineering',
+        nickname: 'no_user',
         age: 39,
       },
       {
@@ -1115,6 +1238,7 @@ export class EMPLOYEE {
         email: 'hrangle3d@wikia.com',
         gender: 'Male',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 47,
       },
       {
@@ -1124,6 +1248,7 @@ export class EMPLOYEE {
         email: 'tmurrells3e@google.com.au',
         gender: 'Female',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 59,
       },
       {
@@ -1133,6 +1258,7 @@ export class EMPLOYEE {
         email: 'aianinotti3f@nps.gov',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 60,
       },
       {
@@ -1142,6 +1268,7 @@ export class EMPLOYEE {
         email: 'rdibdall3g@sciencedaily.com',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 46,
       },
       {
@@ -1151,6 +1278,7 @@ export class EMPLOYEE {
         email: 'cblaine3h@state.tx.us',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 48,
       },
       {
@@ -1160,6 +1288,7 @@ export class EMPLOYEE {
         email: 'jchazotte3i@sbwire.com',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 48,
       },
       {
@@ -1169,6 +1298,7 @@ export class EMPLOYEE {
         email: 'treadshaw3j@barnesandnoble.com',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 32,
       },
       {
@@ -1178,6 +1308,7 @@ export class EMPLOYEE {
         email: 'wmewha3k@harvard.edu',
         gender: 'Female',
         position: 'Services',
+        nickname: 'no_user',
         age: 20,
       },
       {
@@ -1187,6 +1318,7 @@ export class EMPLOYEE {
         email: 'wmarsie3l@artisteer.com',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 51,
       },
       {
@@ -1196,6 +1328,7 @@ export class EMPLOYEE {
         email: 'mrobshaw3m@cafepress.com',
         gender: 'Female',
         position: 'Legal',
+        nickname: 'no_user',
         age: 50,
       },
       {
@@ -1205,6 +1338,7 @@ export class EMPLOYEE {
         email: 'nburde3n@issuu.com',
         gender: 'Male',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 34,
       },
       {
@@ -1214,6 +1348,7 @@ export class EMPLOYEE {
         email: 'vgelletly3o@xinhuanet.com',
         gender: 'Female',
         position: 'Product Management',
+        nickname: 'no_user',
         age: 52,
       },
       {
@@ -1223,6 +1358,7 @@ export class EMPLOYEE {
         email: 'dderoeck3p@walmart.com',
         gender: 'Female',
         position: 'Marketing',
+        nickname: 'no_user',
         age: 43,
       },
       {
@@ -1232,6 +1368,7 @@ export class EMPLOYEE {
         email: 'dswitland3q@huffingtonpost.com',
         gender: 'Female',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -1241,6 +1378,7 @@ export class EMPLOYEE {
         email: 'bhylands3r@bigcartel.com',
         gender: 'Male',
         position: 'Support',
+        nickname: 'no_user',
         age: 40,
       },
       {
@@ -1250,6 +1388,7 @@ export class EMPLOYEE {
         email: 'rcunnah3s@marriott.com',
         gender: 'Male',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 39,
       },
       {
@@ -1259,6 +1398,7 @@ export class EMPLOYEE {
         email: 'awagenen3t@plala.or.jp',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 23,
       },
       {
@@ -1268,6 +1408,7 @@ export class EMPLOYEE {
         email: 'dsmewing3u@google.cn',
         gender: 'Male',
         position: 'Accounting',
+        nickname: 'no_user',
         age: 22,
       },
       {
@@ -1277,6 +1418,7 @@ export class EMPLOYEE {
         email: 'hhammatt3v@digg.com',
         gender: 'Male',
         position: 'Human Resources',
+        nickname: 'no_user',
         age: 44,
       },
       {
@@ -1286,6 +1428,7 @@ export class EMPLOYEE {
         email: 'sskitral3w@arizona.edu',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 47,
       },
       {
@@ -1295,6 +1438,7 @@ export class EMPLOYEE {
         email: 'jshoppee3x@wikia.com',
         gender: 'Female',
         position: 'Training',
+        nickname: 'no_user',
         age: 42,
       },
       {
@@ -1304,6 +1448,7 @@ export class EMPLOYEE {
         email: 'lpidgeley3y@over-blog.com',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 25,
       },
       {
@@ -1313,6 +1458,7 @@ export class EMPLOYEE {
         email: 'cbehninck3z@digg.com',
         gender: 'Male',
         position: 'Research and Development',
+        nickname: 'no_user',
         age: 54,
       },
       {
@@ -1322,6 +1468,7 @@ export class EMPLOYEE {
         email: 'hduiguid40@ca.gov',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 51,
       },
       {
@@ -1331,6 +1478,7 @@ export class EMPLOYEE {
         email: 'sosharkey41@cdbaby.com',
         gender: 'Female',
         position: 'Business Development',
+        nickname: 'no_user',
         age: 23,
       },
       {
@@ -1340,6 +1488,7 @@ export class EMPLOYEE {
         email: 'nlapenna42@1688.com',
         gender: 'Male',
         position: 'Services',
+        nickname: 'no_user',
         age: 21,
       },
       {
@@ -1349,6 +1498,7 @@ export class EMPLOYEE {
         email: 'vbuckham43@marriott.com',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 51,
       },
       {
@@ -1358,6 +1508,7 @@ export class EMPLOYEE {
         email: 'dgoldup44@independent.co.uk',
         gender: 'Female',
         position: 'Support',
+        nickname: 'no_user',
         age: 38,
       },
       {
@@ -1367,6 +1518,7 @@ export class EMPLOYEE {
         email: 'chuge45@bandcamp.com',
         gender: 'Male',
         position: 'Training',
+        nickname: 'no_user',
         age: 30,
       },
     ];
