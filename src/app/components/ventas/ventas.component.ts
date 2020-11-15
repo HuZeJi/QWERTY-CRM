@@ -3,17 +3,17 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
-import { BuysService } from './../../services/buys.service';
+import { SellsService } from './../../services/sells.service';
 
 @Component({
-  selector: 'app-compras',
-  templateUrl: './compras.component.html',
-  styleUrls: ['./compras.component.scss'],
+  selector: 'app-ventas',
+  templateUrl: './ventas.component.html',
+  styleUrls: ['./ventas.component.scss'],
 })
-export class ComprasComponent implements AfterViewInit {
+export class VentasComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'id',
-    'proveedor',
+    'cliente',
     'fecha_emision',
     'fecha_cancelacion',
     'empleado',
@@ -27,11 +27,11 @@ export class ComprasComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngAfterViewInit(): void {
-    this.buyService.fillBuys();
+    this.sellService.fillSells();
     this.loadData();
   }
 
-  constructor(public dialog: MatDialog, private buyService: BuysService) {}
+  constructor(public dialog: MatDialog, private sellService: SellsService) {}
 
   applyFilter(event: Event): any {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -39,7 +39,7 @@ export class ComprasComponent implements AfterViewInit {
   }
 
   loadData(): void {
-    this.dataSource = new MatTableDataSource(this.buyService.getBuys());
+    this.dataSource = new MatTableDataSource(this.sellService.getSells());
     this.dataSource.paginator = this.paginator;
   }
 }

@@ -14,6 +14,7 @@ import { CreateEmployeeComponent } from './components/employees/create-employee/
 import { FormsModule } from '@angular/forms';
 import { DataEditUsersComponent } from './components/users/data-edit-users/data-edit-users.component';
 import { ComprasComponent } from './components/compras/compras.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ComprasComponent } from './components/compras/compras.component';
     CreateEmployeeComponent,
     DataEditUsersComponent,
     ComprasComponent,
+    VentasComponent,
   ],
   imports: [
     BrowserModule,
