@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+<div *ngIf="data.type == 1" class="render-area-create">
+    <mat-form-field *ngFor="let item of data.fields; let i = index" class="field">
+        <mat-label>{{ item.text }}</mat-label>
+        <input matInput [(ngModel)]="createModel[i]" [name]="item.name"/>
+    </mat-form-field>
+</div>
+<div *ngIf="data.type == 2" class="render-area-edit">
+    <mat-form-field *ngFor="let item of data.fields; let i = index" class="field">
+        <mat-label>{{ item.text }}</mat-label>
+        <input matInput [(ngModel)]="editModel[i]" [name]="item.name"/>
+    </mat-form-field>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button *ngIf="data.type == 1" mat-button [mat-dialog-close]="createModel" class="btn btn-action">
+   Crear
+  </button>
+  <button *ngIf="data.type == 2" mat-button [mat-dialog-close]="editModel" class="btn btn-action">
+   Editar
+  </button>
+  <button mat-button [mat-dialog-close]="false" class="btn btn-warning">
+    Cancelar
+  </button>
+</mat-dialog-actions>

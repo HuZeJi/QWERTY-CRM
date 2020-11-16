@@ -90,13 +90,36 @@ export class DataServiceService {
     },
   ]
 
+  // LICENCES
   getLicences(){
     return this.licences;
   }
 
+  // CLIENTS
   getClients(){
     return this.clients;
   }
 
+  getClient(id: number){
+    const result = this.clients.find(i => i.id === id);
+    return result;
+  }
+
+  editClient(client: Clientes_I){
+    const result = this.clients.find(i => i.id === client.id);
+    result.id = client.id;
+    result.name = client.name;
+    result.direction = client.direction;
+    result.phone = client.phone;
+  }
+
+  deleteClient(id: number){
+    const result = this.clients.find(i => i.id === id);
+    this.clients.splice(this.clients.indexOf(result), 1);
+  }
+
+  createClient(client: Clientes_I) {
+    this.clients.push(client);
+  }
 
 }
