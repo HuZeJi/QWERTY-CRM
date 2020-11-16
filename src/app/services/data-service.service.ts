@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { storage_I } from '../utils/storage-interface';
 import { Clientes_I } from '../utils/clients-interface';
+import { Solution_I } from '../utils/solution.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -90,6 +91,38 @@ export class DataServiceService {
     },
   ]
 
+  // Solutions
+  private Solutions:  Solution_I[] = [
+    {
+      id: 1,
+      name: 'Enterprise Basic',
+      type: 'Enterprise',
+      price: 500,
+      duration: 12
+    },
+    {
+      id: 2,
+      name: 'Enterprise Pro',
+      type: 'Enterprise',
+      price: 800,
+      duration: 12
+    },
+    {
+      id: 3,
+      name: 'Pyme Basic',
+      type: 'Pyme',
+      price: 1600,
+      duration: 12
+    },
+    {
+      id: 4,
+      name: 'Pyme Pro',
+      type: 'Pyme',
+      price: 3000,
+      duration: 12
+    },
+  ]
+
   // LICENCES
   getLicences(){
     return this.licences;
@@ -145,6 +178,33 @@ export class DataServiceService {
     this.clients.push(client);
   }
 
+  // SOLUTIONS
+  getSolutions(){
+    return this.Solutions;
+  }
+
+  getSolution(id: number){
+    const result = this.Solutions.find(i => i.id === id);
+    return result;
+  }
+
+  createSolution(solution: Solution_I) {
+    this.Solutions.push(solution);
+  }
+
+  editSolution(solution: Solution_I){
+    const result = this.Solutions.find(i => i.id === solution.id);
+    result.id = solution.id;
+    result.name = solution.name;
+    result.type = solution.type;
+    result.price = solution.price;
+    result.duration = solution.duration;
+  }
+
+  deleteSolution(id: number){
+    const result = this.Solutions.find(i => i.id === id);
+    this.Solutions.splice(this.Solutions.indexOf(result), 1);
+  }
   
 
 }

@@ -18,6 +18,7 @@ import { VentasComponent } from './components/ventas/ventas.component';
 import { StorageComponent } from './components/storage/storage.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { GenericDialogComponent } from './components/shared/generic-dialog/generic-dialog.component';
+import { SolutionsComponent } from './components/solutions/solutions.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GenericDialogComponent } from './components/shared/generic-dialog/gener
     VentasComponent,
     StorageComponent,
     ClientsComponent,
-    GenericDialogComponent
+    GenericDialogComponent,
+    SolutionsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,36 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from '../../services/data-service.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DataServiceService } from 'src/app/services/data-service.service';
 import { Clientes_I } from '../../utils/clients-interface';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import { GenericDialogComponent } from '../shared/generic-dialog/generic-dialog.component';
+import { Solution_I } from 'src/app/utils/solution.interface';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss']
+  selector: 'app-solutions',
+  templateUrl: './solutions.component.html',
+  styleUrls: ['./solutions.component.scss']
 })
-export class ClientsComponent implements OnInit {
+export class SolutionsComponent implements OnInit {
 
   displayedColumns: string[] = [
     'id',
     'name',
-    'direction',
-    'phone',
+    'type',
+    'price',
+    'duration',
     'actions'
   ];
 
   dataSource: any;
 
-  newClientObj = {
+  newSolutionObj = {
     title: "Ingreso de datos",
     type: 1,
     fields: [
       {index: 0, name: "id", text: "ID"},
       {index: 1, name: "name", text: "Name"},
-      {index: 2, name: "direction", text: "Direction"},
-      {index: 3, name: "phone", text: "Phone"},
+      {index: 2, name: "type", text: "Type"},
+      {index: 3, name: "price", text: "Price"},
+      {index: 4, name: "duration", text: "Duration"},
     ]
   };
 
@@ -41,8 +44,9 @@ export class ClientsComponent implements OnInit {
     this.filldata();
   }
 
+  
   filldata(){
-    this.dataSource = new MatTableDataSource<Clientes_I>(this.dataService.getClients());
+    this.dataSource = new MatTableDataSource<Solution_I>(this.dataService.getSolutions());
   }
 
   filterTable( e: Event ){
@@ -50,9 +54,9 @@ export class ClientsComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  newClient(){
+  newSolution(){
     const dialogRef = this.dialog.open(GenericDialogComponent,{
-      data: this.newClientObj
+      data: this.newSolutionObj
     });  
 
     dialogRef.afterClosed().subscribe((data) =>{
@@ -64,9 +68,9 @@ export class ClientsComponent implements OnInit {
         }).then((confirmation) => {
           if (confirmation.isConfirmed) {
 
-            const [id, name, direction, phone] = data;
-            const clientObj: Clientes_I = { id: id, name: name, direction: direction, phone: phone }
-            this.dataService.createClient(clientObj);
+            const [id, name, type, price, duration] = data;
+            const solutionObj: Solution_I = { id: id, name: name, type: type, price: price, duration: duration }
+            this.dataService.createSolution(solutionObj);
             this.filldata();
           }
         });
@@ -74,16 +78,17 @@ export class ClientsComponent implements OnInit {
     });
   }
 
-  editClient(id: number){
-    const result = this.dataService.getClient(id);
+  editSolution(id: number){
+    const result = this.dataService.getSolution(id);
     const editClientObj = {
       title: "Editar datos",
       type: 2,
       fields: [
         {index: 0, name: "id", text: "ID", value: result.id},
         {index: 1, name: "name", text: "Name", value: result.name},
-        {index: 2, name: "direction", text: "Direction", value: result.direction},
-        {index: 3, name: "phone", text: "Phone", value: result.phone},
+        {index: 2, name: "type", text: "Type", value: result.type},
+        {index: 3, name: "price", text: "Price", value: result.price},
+        {index: 4, name: "duration", text: "Duration", value: result.duration},
       ]
     };
 
@@ -101,9 +106,9 @@ export class ClientsComponent implements OnInit {
           }).then((confirmation) => {
             if (confirmation.isConfirmed) {
   
-              const [id, name, direction, phone] = data;
-              const clientObj: Clientes_I = { id: id, name: name, direction: direction, phone: phone }
-              this.dataService.editClient(clientObj);
+              const [id, name, type, price, duration] = data;
+              const solutionObj: Solution_I = { id: id, name: name, type: type, price: price, duration: duration }
+              this.dataService.editSolution(solutionObj);
               this.filldata();
             }
           });
@@ -113,14 +118,14 @@ export class ClientsComponent implements OnInit {
     }
   }
 
-  deleteClient(id: number): void {
+  deleteSolution(id: number): void {
     Swal.fire({
       title: 'Estas seguro de eliminar los datos?',
       showDenyButton: true,
       confirmButtonText: 'Eliminar',
     }).then((confirmation) => {
       if (confirmation.isConfirmed) {
-        this.dataService.deleteClient(id);
+        this.dataService.deleteSolution(id);
         this.filldata();
         this.loadConfirmDialog();
       } else if (confirmation.isDenied) {
