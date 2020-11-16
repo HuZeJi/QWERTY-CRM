@@ -95,6 +95,29 @@ export class DataServiceService {
     return this.licences;
   }
 
+  getLicence(id: number){
+    const result = this.licences.find(i => i.id === id);
+    return result;
+  }
+
+  createLicence(licence: storage_I) {
+    this.licences.push(licence);
+  }
+
+  editLicence(licence: storage_I){
+    const result = this.licences.find(i => i.id === licence.id);
+    result.id = licence.id;
+    result.name = licence.name;
+    result.type = licence.type;
+    result.duration = licence.duration;
+    result.price = licence.price;
+  }
+
+  deleteLicence(id: number){
+    const result = this.licences.find(i => i.id === id);
+    this.licences.splice(this.licences.indexOf(result), 1);
+  }
+
   // CLIENTS
   getClients(){
     return this.clients;
@@ -121,5 +144,7 @@ export class DataServiceService {
   createClient(client: Clientes_I) {
     this.clients.push(client);
   }
+
+  
 
 }

@@ -4,13 +4,13 @@
     <div class="filter-section">
       <mat-form-field class="textbox-filter">
         <mat-label>Licences</mat-label>
-        <input matInput placeholder="Search licences" #input />
+        <input (input)="filterTable($event)" matInput placeholder="Search licences" #input />
       </mat-form-field>
     </div>
   </div>
   <div class="content-section">
     <div class="actions">
-      <a mat-flat-button class="btn btn-create">
+      <a (click)="newLicence()" mat-flat-button class="btn btn-create">
         <mat-icon>add</mat-icon>
         Create New Licence
       </a>
@@ -42,8 +42,8 @@
           <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let element">
             <div class="action-section">
-              <a mat-flat-button class="btn btn-action">Edit</a>
-              <a mat-flat-button class="btn btn-warning">Delete</a>
+              <a (click)="editLicences(element.id)" mat-flat-button class="btn btn-action">Edit</a>
+              <a (click)="deleteLicence(element.id)" mat-flat-button class="btn btn-warning">Delete</a>
             </div>
           </td>
         </ng-container>
