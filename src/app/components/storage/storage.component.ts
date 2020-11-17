@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { storage_I } from '../../utils/storage-interface';
 import { MatTableDataSource } from '@angular/material/table';
 import { DataServiceService } from '../../services/data-service.service';
@@ -7,13 +6,16 @@ import { Clientes_I } from '../../utils/clients-interface';
 import { MatDialog } from '@angular/material/dialog';
 import { GenericDialogComponent } from '../shared/generic-dialog/generic-dialog.component';
 import Swal from 'sweetalert2';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-storage',
   templateUrl: './storage.component.html',
   styleUrls: ['./storage.component.scss']
 })
-export class StorageComponent implements OnInit {
+export class StorageComponent implements AfterViewInit {
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = [
     'id',
@@ -39,10 +41,12 @@ export class StorageComponent implements OnInit {
   };
 
   constructor(private dataService: DataServiceService,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog) {
+                this.dataSource = new MatTableDataSource<storage_I>(this.dataService.getLicences());
+               }
 
-  ngOnInit(): void {
-  this.getLicences();
+  ngAfterViewInit (): void {
+      this.dataSource.paginator = this.paginator;
   }
 
   newLicence(){
@@ -139,6 +143,7 @@ export class StorageComponent implements OnInit {
 
   fillData(){
     this.dataSource = new MatTableDataSource<storage_I>(this.dataService.getLicences());
+    this.dataSource.paginator = this.paginator;
   }
 
   filterTable( e: Event ){

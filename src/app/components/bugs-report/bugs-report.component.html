@@ -1,18 +1,18 @@
 <div class="container">
     <div class="header-section">
-      <h1>Clients</h1>
+      <h1>Bugs Report</h1>
       <div class="filter-section">
         <mat-form-field class="textbox-filter">
-          <mat-label>Clients</mat-label>
-          <input matInput (keyup)="filterTable($event)" placeholder="Search clients" #input />
+          <mat-label>Bugs</mat-label>
+          <input matInput (keyup)="filterTable($event)" placeholder="Search Bugs" #input />
         </mat-form-field>
       </div>
     </div>
     <div class="content-section">
       <div class="actions">
-        <a (click)="newClient()" mat-flat-button class="btn btn-create">
+        <a (click)="newBug()" mat-flat-button class="btn btn-create">
           <mat-icon>add</mat-icon>
-          Create New Client
+          Create New Bug Report
         </a>
       </div>
       <div class="table">
@@ -25,21 +25,25 @@
             <th mat-header-cell *matHeaderCellDef>Name</th>
             <td mat-cell *matCellDef="let element">{{ element.name }}</td>
           </ng-container>
-          <ng-container matColumnDef="direction">
-            <th mat-header-cell *matHeaderCellDef>Direction</th>
-            <td mat-cell *matCellDef="let element">{{ element.direction }}</td>
+          <ng-container matColumnDef="origin">
+            <th mat-header-cell *matHeaderCellDef>Origin</th>
+            <td mat-cell *matCellDef="let element">{{ element.origin }}</td>
           </ng-container>
-          <ng-container matColumnDef="phone">
-            <th mat-header-cell *matHeaderCellDef>Phone</th>
-            <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef>Description</th>
+            <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element">{{ element.status }}</td>
           </ng-container>
 
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
               <div class="action-section">
-                <a (click)="editClient(element.id)" mat-flat-button class="btn btn-action">Edit</a>
-                <a (click)="deleteClient(element.id)" mat-flat-button class="btn btn-warning">Delete</a>
+                <a (click)="editBug(element.id)" mat-flat-button class="btn btn-action">Edit</a>
+                <a (click)="deleteBug(element.id)" mat-flat-button class="btn btn-warning">Delete</a>
               </div>
             </td>
           </ng-container>

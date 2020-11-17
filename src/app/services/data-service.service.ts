@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { storage_I } from '../utils/storage-interface';
 import { Clientes_I } from '../utils/clients-interface';
 import { Solution_I } from '../utils/solution.interface';
+import { BugsReport_I } from '../utils/bugsreports.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -123,6 +124,34 @@ export class DataServiceService {
     },
   ]
 
+  // Bugs
+  private bugs:  BugsReport_I[] = [
+    {
+      id: 1,
+      name: 'Email restore password',
+      origin: 'Call Center',
+      description: 'when the user tries to reset his password, he does not receive the email with the link',
+      status: 'Solved'
+    },
+    
+    {
+      id: 2,
+      name: 'Instalation Error',
+      origin: 'Email',
+      description: 'Message with error code 236, when installing Pyme Pro solution, installation in windows 10',
+      status: 'In process'
+    },
+    
+    {
+      id: 3,
+      name: 'User roles and limitations',
+      origin: 'Call Center',
+      description: 'User blocked for downloading content in bulk even when permissions support it',
+      status: 'Recived'
+    },
+    
+  ]
+
   // LICENCES
   getLicences(){
     return this.licences;
@@ -204,6 +233,35 @@ export class DataServiceService {
   deleteSolution(id: number){
     const result = this.Solutions.find(i => i.id === id);
     this.Solutions.splice(this.Solutions.indexOf(result), 1);
+  }
+
+  // BUGS
+
+  getBugs(){
+    return this.bugs;
+  }
+
+  getBug(id: number){
+    const result = this.bugs.find(i => i.id === id);
+    return result;
+  }
+
+  createBug(bugReport: BugsReport_I) {
+    this.bugs.push(bugReport);
+  }
+
+  editBug(bugReport: BugsReport_I){
+    const result = this.bugs.find(i => i.id === bugReport.id);
+    result.id = bugReport.id;
+    result.name = bugReport.name;
+    result.origin = bugReport.origin;
+    result.description = bugReport.description;
+    result.status = bugReport.status;
+  }
+
+  deleteBug(id: number){
+    const result = this.bugs.find(i => i.id === id);
+    this.bugs.splice(this.bugs.indexOf(result), 1);
   }
   
 
