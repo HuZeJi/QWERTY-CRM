@@ -10,7 +10,7 @@ import { VentasComponent } from './components/ventas/ventas.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: StorageComponent },
   { path: 'employees/list', component: EmployeesComponent },
   { path: 'users/list', component: UsersComponent },
   { path: 'buys/list', component: ComprasComponent },

@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { BuysService } from './../../services/buys.service';
+import { ComprasDetailsComponent } from './compras-details/compras-details.component';
 
 @Component({
   selector: 'app-compras',
@@ -32,6 +33,15 @@ export class ComprasComponent implements AfterViewInit {
   }
 
   constructor(public dialog: MatDialog, private buyService: BuysService) {}
+
+  newData(): void {
+    const dialogRef = this.dialog.open(ComprasDetailsComponent);
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log(result);
+      }
+    });
+  }
 
   applyFilter(event: Event): any {
     const filterValue = (event.target as HTMLInputElement).value;

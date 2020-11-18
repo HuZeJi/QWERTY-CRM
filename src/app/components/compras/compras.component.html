@@ -13,6 +13,22 @@
       </mat-form-field>
     </div>
 
+    <a mat-flat-button class="btn btn-create" (click)="newData()">
+      <mat-icon>add</mat-icon>
+      Crear nuevo
+    </a>
+
+    <a
+      mat-flat-button
+      class="btn btn-info"
+      style="width: 200px"
+      href="https://drive.google.com/file/d/1tVM_ZvC0qOQFCc6bn7xg7NZtTzkoVsro/view"
+      target="_blank"
+    >
+      <mat-icon>search</mat-icon>
+      Ver Reporte
+    </a>
+
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>No.</th>

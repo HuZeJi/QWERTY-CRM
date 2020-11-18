@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { SellsService } from './../../services/sells.service';
+import { VentasDetailsComponent } from './ventas-details/ventas-details.component';
 
 @Component({
   selector: 'app-ventas',
@@ -41,5 +42,14 @@ export class VentasComponent implements AfterViewInit {
   loadData(): void {
     this.dataSource = new MatTableDataSource(this.sellService.getSells());
     this.dataSource.paginator = this.paginator;
+  }
+
+  newData(): void {
+    const dialogRef = this.dialog.open(VentasDetailsComponent);
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log(result);
+      }
+    });
   }
 }

@@ -1,0 +1,73 @@
+<div class="container">
+  <h2>COMPRAS</h2>
+  <mat-dialog-content class="">
+    <div class="double-field">
+      <mat-form-field class="field">
+        <mat-label>Identification</mat-label>
+        <input matInput [(ngModel)]="header.id" />
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Fecha Emision</mat-label>
+        <input matInput [(ngModel)]="header.id" />
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Fecha Cancelacion</mat-label>
+        <input matInput [(ngModel)]="header.id" />
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Empleado</mat-label>
+        <input matInput [(ngModel)]="header.id" />
+      </mat-form-field>
+
+      <mat-form-field class="field">
+        <mat-label>Total</mat-label>
+        <input matInput [(ngModel)]="header.id" />
+      </mat-form-field>
+
+      <a mat-flat-button class="btn btn-action">Crear</a>
+    </div>
+
+    <br />
+    <br />
+    <mat-form-field class="field">
+      <mat-label>Identification</mat-label>
+      <input matInput [(ngModel)]="detail.id" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select an option</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let storage of storages" [value]="storage">{{
+          storage.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Cantidad</mat-label>
+      <input matInput [(ngModel)]="detail.quantity" />
+    </mat-form-field>
+    <a mat-flat-button class="btn btn-action">Añadir</a>
+
+    <!-- <mat-form-field class="field">
+      <mat-label>Identification</mat-label>
+      <input matInput [(ngModel)]="user.id" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="user.nickname" />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="user.password" />
+    </mat-form-field> -->
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <!-- <a mat-flat-button class="btn btn-warning">Salir</a> -->
+  </mat-dialog-actions>
+</div>
