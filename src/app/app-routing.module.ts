@@ -9,9 +9,11 @@ import { ComprasComponent } from './components/compras/compras.component';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
+import { DefaultViewComponent } from './components/default-view/default-view.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: "full" },
+  { path: 'home', component: DefaultViewComponent },
   { path: 'employees/list', component: EmployeesComponent },
   { path: 'users/list', component: UsersComponent },
   { path: 'buys/list', component: ComprasComponent },

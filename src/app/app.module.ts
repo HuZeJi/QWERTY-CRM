@@ -20,6 +20,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { GenericDialogComponent } from './components/shared/generic-dialog/generic-dialog.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
+import { DefaultViewComponent } from './components/default-view/default-view.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BugsReportComponent } from './components/bugs-report/bugs-report.compon
     ClientsComponent,
     GenericDialogComponent,
     SolutionsComponent,
-    BugsReportComponent
+    BugsReportComponent,
+    DefaultViewComponent
   ],
   imports: [
     BrowserModule,
