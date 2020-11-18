@@ -12,12 +12,9 @@ import { BugsReportComponent } from './components/bugs-report/bugs-report.compon
 import { DefaultViewComponent } from './components/default-view/default-view.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: DefaultViewComponent },
-=======
   { path: '', component: StorageComponent },
->>>>>>> 88e918a76451486140fb4345ed546809e36759c6
   { path: 'employees/list', component: EmployeesComponent },
   { path: 'users/list', component: UsersComponent },
   { path: 'buys/list', component: ComprasComponent },
