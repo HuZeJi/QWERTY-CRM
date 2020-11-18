@@ -40,14 +40,10 @@ import { DefaultViewComponent } from './components/default-view/default-view.com
     ClientsComponent,
     GenericDialogComponent,
     SolutionsComponent,
-<<<<<<< HEAD
-    BugsReportComponent,
-    DefaultViewComponent
-=======
     ComprasDetailsComponent,
     VentasDetailsComponent,
     BugsReportComponent,
->>>>>>> 88e918a76451486140fb4345ed546809e36759c6
+
   ],
   imports: [
     BrowserModule,
