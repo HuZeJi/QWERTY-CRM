@@ -23,6 +23,7 @@ import { ComprasDetailsComponent } from './components/compras/compras-details/co
 import { VentasDetailsComponent } from './components/ventas/ventas-details/ventas-details.component';
 import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
 import { DefaultViewComponent } from './components/default-view/default-view.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { DefaultViewComponent } from './components/default-view/default-view.com
     ComprasDetailsComponent,
     VentasDetailsComponent,
     BugsReportComponent,
+    LoginComponent,
 
   ],
   imports: [

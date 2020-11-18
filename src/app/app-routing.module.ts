@@ -10,19 +10,23 @@ import { VentasComponent } from './components/ventas/ventas.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
 import { DefaultViewComponent } from './components/default-view/default-view.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: "full" },
-  { path: 'home', component: DefaultViewComponent },
-  { path: '', component: StorageComponent },
-  { path: 'employees/list', component: EmployeesComponent },
-  { path: 'users/list', component: UsersComponent },
-  { path: 'buys/list', component: ComprasComponent },
-  { path: 'sells/list', component: VentasComponent },
-  { path: 'licences', component: StorageComponent },
-  { path: 'solutions', component: SolutionsComponent },
-  { path: 'clients', component: ClientsComponent },
-  { path: 'bugsreport', component: BugsReportComponent },
+  { path: '', redirectTo: 'login', pathMatch: "full" },
+  { path: 'login', component: LoginComponent },
+  { path: 'app', component: HomeComponent,
+    children:[
+      { path: 'employees/list', component: EmployeesComponent },
+      { path: 'users/list', component: UsersComponent },
+      { path: 'buys/list', component: ComprasComponent },
+      { path: 'sells/list', component: VentasComponent },
+      { path: 'licences', component: StorageComponent },
+      { path: 'solutions', component: SolutionsComponent },
+      { path: 'clients', component: ClientsComponent },
+      { path: 'bugsreport', component: BugsReportComponent },
+    ] 
+  },
 ];
 
 @NgModule({
