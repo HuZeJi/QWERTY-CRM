@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { Clientes_I } from '../../utils/clients-interface';
@@ -6,13 +6,16 @@ import { MatTableDataSource } from '@angular/material/table';
 import Swal from 'sweetalert2';
 import { GenericDialogComponent } from '../shared/generic-dialog/generic-dialog.component';
 import { Solution_I } from 'src/app/utils/solution.interface';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-solutions',
   templateUrl: './solutions.component.html',
   styleUrls: ['./solutions.component.scss']
 })
-export class SolutionsComponent implements OnInit {
+export class SolutionsComponent implements AfterViewInit {
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   displayedColumns: string[] = [
     'id',
@@ -38,15 +41,18 @@ export class SolutionsComponent implements OnInit {
   };
 
   constructor(private dataService: DataServiceService,
-              private dialog: MatDialog) { }
+              private dialog: MatDialog) {
+                this.dataSource = new MatTableDataSource<Solution_I>(this.dataService.getSolutions());
+               }
 
-  ngOnInit(): void {
-    this.filldata();
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
   }
 
   
   filldata(){
     this.dataSource = new MatTableDataSource<Solution_I>(this.dataService.getSolutions());
+    this.dataSource.paginator = this.paginator;
   }
 
   filterTable( e: Event ){

@@ -8,6 +8,7 @@ import { UsersComponent } from './components/users/users.component';
 import { ComprasComponent } from './components/compras/compras.component';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
+import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
 
 const routes: Routes = [
   { path: '', component: StorageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'licences', component: StorageComponent },
   { path: 'solutions', component: SolutionsComponent },
   { path: 'clients', component: ClientsComponent },
+  { path: 'bugsreport', component: BugsReportComponent },
 ];
 
 @NgModule({

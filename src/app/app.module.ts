@@ -21,6 +21,7 @@ import { GenericDialogComponent } from './components/shared/generic-dialog/gener
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { ComprasDetailsComponent } from './components/compras/compras-details/compras-details.component';
 import { VentasDetailsComponent } from './components/ventas/ventas-details/ventas-details.component';
+import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { VentasDetailsComponent } from './components/ventas/ventas-details/venta
     SolutionsComponent,
     ComprasDetailsComponent,
     VentasDetailsComponent,
+    BugsReportComponent,
   ],
   imports: [
     BrowserModule,
