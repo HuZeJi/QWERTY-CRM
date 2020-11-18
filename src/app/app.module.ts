@@ -19,6 +19,8 @@ import { StorageComponent } from './components/storage/storage.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { GenericDialogComponent } from './components/shared/generic-dialog/generic-dialog.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
+import { ComprasDetailsComponent } from './components/compras/compras-details/compras-details.component';
+import { VentasDetailsComponent } from './components/ventas/ventas-details/ventas-details.component';
 import { BugsReportComponent } from './components/bugs-report/bugs-report.component';
 import { DefaultViewComponent } from './components/default-view/default-view.component';
 
@@ -38,8 +40,14 @@ import { DefaultViewComponent } from './components/default-view/default-view.com
     ClientsComponent,
     GenericDialogComponent,
     SolutionsComponent,
+<<<<<<< HEAD
     BugsReportComponent,
     DefaultViewComponent
+=======
+    ComprasDetailsComponent,
+    VentasDetailsComponent,
+    BugsReportComponent,
+>>>>>>> 88e918a76451486140fb4345ed546809e36759c6
   ],
   imports: [
     BrowserModule,
